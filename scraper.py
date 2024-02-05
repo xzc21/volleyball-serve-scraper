@@ -5,7 +5,7 @@ import time
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from secrets import email, password, to_email
+from secrets import from_addr, password, to_addr
 
 
 import requests
