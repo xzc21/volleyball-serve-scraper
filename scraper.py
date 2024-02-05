@@ -5,7 +5,7 @@ import time
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from secrets import from_addr, password, to_addr
+from secrets import from_addr, email_password, to_addr
 
 
 import requests
@@ -316,11 +316,11 @@ data = {
 
 
 data2 = {
-  'appointments[0][ID]': '46d677a7-5fa7-4d66-a265-b3b337a5b71f',
+  'appointments[0][ID]': 'c21623e3-bfdb-4f9a-aa01-55bf30d257ae',
   'appointments[0][RecurrenceInfo]': '',
   'appointments[0][AppointmentType]': '0',
-  'appointments[0][StartDate]': '2024-02-04T09:00:00',
-  'appointments[0][EndDate]': '2024-02-04T11:30:00',
+  'appointments[0][StartDate]': '2024-02-07T22:30:00',
+  'appointments[0][EndDate]': '2024-02-08T00:15:00',
   'appointments[0][Location]': 'PAC Small Gym',
   'appointments[0][Subject]': '',
   'appointments[0][AllDay]': 'false',
@@ -338,11 +338,11 @@ data2 = {
   'appointments[0][IsInstructor]': 'false',
   'appointments[0][InstructorId]': '00000000-0000-0000-0000-000000000000',
   'appointments[0][IsRecurring]': 'false',
-  'appointments[1][ID]': '4f418d4d-0c56-45e8-9ac2-d52a17e878fa',
+  'appointments[1][ID]': '1eb7272c-d8b6-4f3e-be86-a95fd1453350',
   'appointments[1][RecurrenceInfo]': '',
   'appointments[1][AppointmentType]': '0',
-  'appointments[1][StartDate]': '2024-02-04T11:30:00',
-  'appointments[1][EndDate]': '2024-02-04T14:00:00',
+  'appointments[1][StartDate]': '2024-02-08T21:30:00',
+  'appointments[1][EndDate]': '2024-02-09T00:00:00',
   'appointments[1][Location]': 'PAC Small Gym',
   'appointments[1][Subject]': '',
   'appointments[1][AllDay]': 'false',
@@ -360,12 +360,12 @@ data2 = {
   'appointments[1][IsInstructor]': 'false',
   'appointments[1][InstructorId]': '00000000-0000-0000-0000-000000000000',
   'appointments[1][IsRecurring]': 'false',
-  'appointments[2][ID]': 'c21623e3-bfdb-4f9a-aa01-55bf30d257ae',
+  'appointments[2][ID]': '15058d5f-4d0e-43f9-a169-7433d48b7381',
   'appointments[2][RecurrenceInfo]': '',
   'appointments[2][AppointmentType]': '0',
-  'appointments[2][StartDate]': '2024-02-07T22:30:00',
-  'appointments[2][EndDate]': '2024-02-08T00:15:00',
-  'appointments[2][Location]': 'PAC Small Gym',
+  'appointments[2][StartDate]': '2024-02-09T15:01:00',
+  'appointments[2][EndDate]': '2024-02-09T17:00:00',
+  'appointments[2][Location]': 'CIF Gym 1',
   'appointments[2][Subject]': '',
   'appointments[2][AllDay]': 'false',
   'appointments[2][ResourceId]': '',
@@ -382,12 +382,12 @@ data2 = {
   'appointments[2][IsInstructor]': 'false',
   'appointments[2][InstructorId]': '00000000-0000-0000-0000-000000000000',
   'appointments[2][IsRecurring]': 'false',
-  'appointments[3][ID]': '1eb7272c-d8b6-4f3e-be86-a95fd1453350',
+  'appointments[3][ID]': '2b4e66a0-2c93-419f-b7ae-e4f907cd51dd',
   'appointments[3][RecurrenceInfo]': '',
   'appointments[3][AppointmentType]': '0',
-  'appointments[3][StartDate]': '2024-02-08T21:30:00',
-  'appointments[3][EndDate]': '2024-02-09T00:00:00',
-  'appointments[3][Location]': 'PAC Small Gym',
+  'appointments[3][StartDate]': '2024-02-09T15:02:00',
+  'appointments[3][EndDate]': '2024-02-09T17:00:00',
+  'appointments[3][Location]': 'CIF Gym 2',
   'appointments[3][Subject]': '',
   'appointments[3][AllDay]': 'false',
   'appointments[3][ResourceId]': '',
@@ -404,12 +404,12 @@ data2 = {
   'appointments[3][IsInstructor]': 'false',
   'appointments[3][InstructorId]': '00000000-0000-0000-0000-000000000000',
   'appointments[3][IsRecurring]': 'false',
-  'appointments[4][ID]': '1eb7272c-d8b6-4f3e-be86-a95fd1453350',
+  'appointments[4][ID]': '37f135d0-6877-4d61-9e35-fc9bd8c19bae',
   'appointments[4][RecurrenceInfo]': '',
   'appointments[4][AppointmentType]': '0',
-  'appointments[4][StartDate]': '2024-02-09T21:30:00',
-  'appointments[4][EndDate]': '2024-02-10T00:00:00',
-  'appointments[4][Location]': 'PAC Small Gym',
+  'appointments[4][StartDate]': '2024-02-09T17:01:00',
+  'appointments[4][EndDate]': '2024-02-09T19:00:00',
+  'appointments[4][Location]': 'CIF Gym 1',
   'appointments[4][Subject]': '',
   'appointments[4][AllDay]': 'false',
   'appointments[4][ResourceId]': '',
@@ -426,20 +426,152 @@ data2 = {
   'appointments[4][IsInstructor]': 'false',
   'appointments[4][InstructorId]': '00000000-0000-0000-0000-000000000000',
   'appointments[4][IsRecurring]': 'false',
+  'appointments[5][ID]': 'f2861924-0397-4037-9c1f-5f6bd5102b86',
+  'appointments[5][RecurrenceInfo]': '',
+  'appointments[5][AppointmentType]': '0',
+  'appointments[5][StartDate]': '2024-02-09T17:02:00',
+  'appointments[5][EndDate]': '2024-02-09T19:00:00',
+  'appointments[5][Location]': 'CIF Gym 2',
+  'appointments[5][Subject]': '',
+  'appointments[5][AllDay]': 'false',
+  'appointments[5][ResourceId]': '',
+  'appointments[5][Status]': '0',
+  'appointments[5][ProductName]': 'SERVE Volleyball Club',
+  'appointments[5][ProductId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[5][ProgramDescription]': '',
+  'appointments[5][ProgramInstanceId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[5][NumberRegistered]': '0',
+  'appointments[5][NumberOnWaitlist]': '0',
+  'appointments[5][ClassSize]': '24',
+  'appointments[5][PortalURL]': '',
+  'appointments[5][InstructorFirstNameLastInitial]': '',
+  'appointments[5][IsInstructor]': 'false',
+  'appointments[5][InstructorId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[5][IsRecurring]': 'false',
+  'appointments[6][ID]': 'f7e8c31a-5876-4e12-9abe-4dff9b57c02f',
+  'appointments[6][RecurrenceInfo]': '',
+  'appointments[6][AppointmentType]': '0',
+  'appointments[6][StartDate]': '2024-02-09T19:01:00',
+  'appointments[6][EndDate]': '2024-02-09T21:00:00',
+  'appointments[6][Location]': 'CIF Gym 1',
+  'appointments[6][Subject]': '',
+  'appointments[6][AllDay]': 'false',
+  'appointments[6][ResourceId]': '',
+  'appointments[6][Status]': '0',
+  'appointments[6][ProductName]': 'SERVE Volleyball Club',
+  'appointments[6][ProductId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[6][ProgramDescription]': '',
+  'appointments[6][ProgramInstanceId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[6][NumberRegistered]': '0',
+  'appointments[6][NumberOnWaitlist]': '0',
+  'appointments[6][ClassSize]': '24',
+  'appointments[6][PortalURL]': '',
+  'appointments[6][InstructorFirstNameLastInitial]': '',
+  'appointments[6][IsInstructor]': 'false',
+  'appointments[6][InstructorId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[6][IsRecurring]': 'false',
+  'appointments[7][ID]': '59440388-2326-4adc-9aa6-6e6ba7b5f65d',
+  'appointments[7][RecurrenceInfo]': '',
+  'appointments[7][AppointmentType]': '0',
+  'appointments[7][StartDate]': '2024-02-09T19:02:00',
+  'appointments[7][EndDate]': '2024-02-09T21:00:00',
+  'appointments[7][Location]': 'CIF Gym 2',
+  'appointments[7][Subject]': '',
+  'appointments[7][AllDay]': 'false',
+  'appointments[7][ResourceId]': '',
+  'appointments[7][Status]': '0',
+  'appointments[7][ProductName]': 'SERVE Volleyball Club',
+  'appointments[7][ProductId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[7][ProgramDescription]': '',
+  'appointments[7][ProgramInstanceId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[7][NumberRegistered]': '0',
+  'appointments[7][NumberOnWaitlist]': '0',
+  'appointments[7][ClassSize]': '24',
+  'appointments[7][PortalURL]': '',
+  'appointments[7][InstructorFirstNameLastInitial]': '',
+  'appointments[7][IsInstructor]': 'false',
+  'appointments[7][InstructorId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[7][IsRecurring]': 'false',
+  'appointments[8][ID]': '1eb7272c-d8b6-4f3e-be86-a95fd1453350',
+  'appointments[8][RecurrenceInfo]': '',
+  'appointments[8][AppointmentType]': '0',
+  'appointments[8][StartDate]': '2024-02-09T21:30:00',
+  'appointments[8][EndDate]': '2024-02-10T00:00:00',
+  'appointments[8][Location]': 'PAC Small Gym',
+  'appointments[8][Subject]': '',
+  'appointments[8][AllDay]': 'false',
+  'appointments[8][ResourceId]': '',
+  'appointments[8][Status]': '0',
+  'appointments[8][ProductName]': 'SERVE Volleyball Club',
+  'appointments[8][ProductId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[8][ProgramDescription]': '',
+  'appointments[8][ProgramInstanceId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[8][NumberRegistered]': '0',
+  'appointments[8][NumberOnWaitlist]': '0',
+  'appointments[8][ClassSize]': '24',
+  'appointments[8][PortalURL]': '',
+  'appointments[8][InstructorFirstNameLastInitial]': '',
+  'appointments[8][IsInstructor]': 'false',
+  'appointments[8][InstructorId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[8][IsRecurring]': 'false',
+  'appointments[9][ID]': '46d677a7-5fa7-4d66-a265-b3b337a5b71f',
+  'appointments[9][RecurrenceInfo]': '',
+  'appointments[9][AppointmentType]': '0',
+  'appointments[9][StartDate]': '2024-02-11T09:00:00',
+  'appointments[9][EndDate]': '2024-02-11T11:30:00',
+  'appointments[9][Location]': 'PAC Small Gym',
+  'appointments[9][Subject]': '',
+  'appointments[9][AllDay]': 'false',
+  'appointments[9][ResourceId]': '',
+  'appointments[9][Status]': '0',
+  'appointments[9][ProductName]': 'SERVE Volleyball Club',
+  'appointments[9][ProductId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[9][ProgramDescription]': '',
+  'appointments[9][ProgramInstanceId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[9][NumberRegistered]': '0',
+  'appointments[9][NumberOnWaitlist]': '0',
+  'appointments[9][ClassSize]': '24',
+  'appointments[9][PortalURL]': '',
+  'appointments[9][InstructorFirstNameLastInitial]': '',
+  'appointments[9][IsInstructor]': 'false',
+  'appointments[9][InstructorId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[9][IsRecurring]': 'false',
+  'appointments[10][ID]': '4f418d4d-0c56-45e8-9ac2-d52a17e878fa',
+  'appointments[10][RecurrenceInfo]': '',
+  'appointments[10][AppointmentType]': '0',
+  'appointments[10][StartDate]': '2024-02-11T11:30:00',
+  'appointments[10][EndDate]': '2024-02-11T14:00:00',
+  'appointments[10][Location]': 'PAC Small Gym',
+  'appointments[10][Subject]': '',
+  'appointments[10][AllDay]': 'false',
+  'appointments[10][ResourceId]': '',
+  'appointments[10][Status]': '0',
+  'appointments[10][ProductName]': 'SERVE Volleyball Club',
+  'appointments[10][ProductId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[10][ProgramDescription]': '',
+  'appointments[10][ProgramInstanceId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[10][NumberRegistered]': '0',
+  'appointments[10][NumberOnWaitlist]': '0',
+  'appointments[10][ClassSize]': '24',
+  'appointments[10][PortalURL]': '',
+  'appointments[10][InstructorFirstNameLastInitial]': '',
+  'appointments[10][IsInstructor]': 'false',
+  'appointments[10][InstructorId]': '00000000-0000-0000-0000-000000000000',
+  'appointments[10][IsRecurring]': 'false',
   'programID': '2882ad00-6e10-4b25-ac28-238a716ab8c5',
   'year': '2024',
   'month': '2',
-  'day': '4'
+  'day': '7'
 }
 
 
-specified_time = "3:01 PM - 5:00 PM"
-specified_time2 = "9:00 AM - 11:30 AM"
+specified_time = "7:02 PM - 9:00 PM"
+specified_time2 = "10:30 PM - 12:15 AM"
 
 
 
-times = [specified_time]
-data = [data]
+times = [specified_time, specified_time2]
+data = [data, data2]
 COOLDOWN = 15 # seconds
 
 
@@ -463,7 +595,7 @@ def send_email(last_email_time, title):
             msg.attach(MIMEText(body, 'plain'))
             server = smtplib.SMTP('smtp-mail.outlook.com', 587)
             server.starttls()
-            server.login(from_addr, password)
+            server.login(from_addr, email_password)
             text = msg.as_string()
             server.sendmail(from_addr, to, text)
             server.quit()
@@ -476,7 +608,6 @@ while True:
     for i in range(len(times)):
         response = requests.post('https://warrior.uwaterloo.ca/Program/FilterProgramInstances', headers=headers, cookies=cookies, data=data[i])
         soup = BeautifulSoup(response.text, 'html.parser')
-        print(soup)
         for program_instance in soup.find_all('div', class_='program-instance-card'):
             # Get the instance time
             instance_time = program_instance.find('span', class_='instance-time-header').text.strip()
