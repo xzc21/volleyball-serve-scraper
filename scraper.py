@@ -572,7 +572,7 @@ specified_time2 = "10:30 PM - 12:15 AM"
 
 times = [specified_time, specified_time2]
 data = [data, data2]
-COOLDOWN = 15 # seconds
+COOLDOWN = 30 # seconds
 
 
 # Set the URL of the page you want to scrape
